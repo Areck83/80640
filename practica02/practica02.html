@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 02 CSS</title>
+    <!-- El orden en el que CSS prevalece depende de su renderaizado, el ultimo estilo es el que aparece en la página -->
+    <!-- Los estilos contienen herencia en los componentes -->
+
+    <!-- Estilo global a la página -->
+    <style>
+        span{
+            color: blue;
+        }
+        #sp1{
+            color:green;
+        }
+    </style>
+     <!-- Estilo global al sitio -->
+     <link rel="stylesheet" href="practica02.css">
+</head>
+<body>
+    <h1 style="color: purple;">texto nivel 1</h1>
+    <!-- p>lorem*5 -->
+    <p><span id="sp1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos natus consectetur consequuntur eligendi nihil, voluptatibus id laboriosam suscipit animi aliquid modi omnis, mollitia, quod impedit velit placeat illo repellendus fugit?
+    </span>
+
+    <span>Dolor accusantium odio ratione doloribus illo molestias aut, aliquid voluptates blanditiis. Nihil sunt, blanditiis nisi nulla velit ratione, fuga impedit odio harum officiis hic minus quia, modi culpa dolor beatae.</span>
+    
+    <span>Illum sit iusto ipsa placeat eius magnam delectus nobis libero facilis necessitatibus, molestiae itaque perferendis culpa ut in distinctio? Ducimus et omnis mollitia. Nam labore fugiat expedita, aliquid obcaecati eligendi!</span>
+    
+    <span>Aut culpa nesciunt veniam obcaecati quidem ad ipsa cumque illum. Temporibus, commodi earum, rerum deleniti quia quasi porro officiis incidunt eveniet perferendis, laudantium consequatur eius molestiae totam velit quo? Sint!
+
+    </span><span class="fuente">Voluptatum natus eius iste nihil. Ab qui maxime ad ex, dolore mollitia quos tenetur blanditiis illum architecto repellendus autem a nihil odio debitis? Unde at quidem ipsam tenetur animi sequi.</span>
+    </p>
+    
+    <p><span id ="sp2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, id blanditiis voluptatem beatae dolore laborum qui quaerat fugit reiciendis quia quos rem, aperiam consequatur doloribus? Itaque at voluptate provident maxime.
+    </span><span class="fuente">Inventore sequi delectus aut! Nemo est fuga cupiditate perferendis atque itaque dolor assumenda optio quae, odit unde minima ducimus voluptatum voluptas rem eos, magni dicta? Excepturi voluptatum nobis non ea.</span><span>Natus cupiditate quasi vel, provident sapiente, iure magni perferendis facere eaque, ipsum assumenda. Expedita praesentium dolor, odit veniam itaque illo rem corporis omnis fuga, adipisci, non ab sint et ratione?</span></p>
+
+    <span class="fuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ipsam excepturi! Neque reprehenderit porro aspernatur, ea dignissimos nostrum corrupti repellat enim aut consequatur velit fugit, totam itaque eius similique modi.
+    </span>
+
+    <!-- div#$*5 -->
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+    <div id="4"></div>
+    <div id="5"></div>
+
+    <p id="parrafopropio">Esta es una lista de prueba</p>
+    <ul class="lista">
+        <li>Cafecito</li>
+        <li>Debajo hay una liga para ver un pan dulce</li>
+        <li><a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgarmeliabakery.com%2Fwp-content%2Fuploads%2F2018%2F01%2FHorn-Bread-Coklat-1140x1140.png&f=1&nofb=1" target="_blank">Pan dulce</a></li>
+        <li>Galletas</li>
+        <li>Leche</li>
+    </ul>
+
+    <img src="pacman.png" title="pacman" width="180" height="140">
+
+    <ol class="lista">
+        <li>No me trates de leer en orden</li>
+        <li>Que no tengo orden</li>
+        <li>No hay orden</li>
+    </ol>
+</body>
+</html>
