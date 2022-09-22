@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*html, body{
+    height: 100%;
+}*/
+
+.padre{
+    border: 10px dashed blue;
+    height: 20vh;
+}

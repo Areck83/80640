@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.Header{
+    height: 26vh;
+    background-color: olive;
+}
+
+.Menu{
+    height: 7vh;
+    background-color: blue;
+}
+
+.Contenido{
+    height: 60vh;
+    width: 80vw;
+    background-color: maroon;
+    
+}
+
+.Publicidad{
+    height: 60vh;
+    width: 20vw;
+    background-color: aqua;
+    
+}
+
+.Pie{
+    height: 7vh;
+    background-color: blue;
+}
+
+.superpadre{
+    display: flex;
+}
