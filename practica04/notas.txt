@@ -1,0 +1,15 @@
+En static no se ve influenciado por nada
+
+En fixed el elemento vuela sobre la pantalla. Permite mantener un elemento fijo respecto al portview.
+
+Relative permite establecer su posición desplazada horizontalmente mediante left y right, así como su posición vertial con top y bottom.
+
+Absolute
+se sitúa respecto la posición del ancestro más cercano, en caso que de no tenga, tomará como referencia al body
+
+Sticky
+mantiene su posicion relativa independiente del scroll, puede haber problemas de compatibilidad en esta propiedad ya que es experimental
+
+Se debe de indicar como top, bottom, left y right.
+
+Sticky se parece al fixed, se mueve pero regresa al valor original en la posicion inicial.
