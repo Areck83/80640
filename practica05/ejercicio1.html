@@ -21,10 +21,23 @@
             //for (let index = 0; index < c.length; index++) {
             //    c[index].style.color = color;
             //}
-            var arr = [].slice.call(c);
-            arr.forEach(element => {
-                console.log(element);
-            });
+            //var arr = [].slice.call(c);
+            //arr.forEach(element => {
+            //    console.log(element);
+            //    element.style.color = color;
+            //});
+            //let i = 0;
+            //for (let x in c){
+            //    if (i < c.length){
+            //        c[x].style.color = color;
+            //        i++;
+            //    }
+            //}
+            for (const x in c){ //const toma todas las propiedades de c
+                if(Object.hasOwnProperty.call(c, x)){ //Se le dice que se asigne lo de abajo cuando el objeto tiene una propiedad única y no toma las adicionales 
+                    c[x].style.color = color;
+                }
+            }
         }
     </script>
 </head>
