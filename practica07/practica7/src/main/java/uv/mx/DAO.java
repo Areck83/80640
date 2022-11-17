@@ -101,4 +101,78 @@ public class DAO {
 
         return msj;
     }
+
+    //Tarea. Me falta probar las funciones porque el programa sigue marcando error
+    //public static boolean modificarUsuario (String nombre, String password, int id)
+    public static String modificarUsuario(Usuario u){
+        PreparedStatement stm = null;
+        Connection cc = null;
+        String msj = "";
+
+        cc = c.getConnection();
+        try{
+            String sql = "UPDATE usuarios set nombre = ?, password = ? where id= ?";
+            stm = (PreparedStatement) cc.prepareStatement(sql);
+            stm.setString(1, u.getNombre());
+            stm.setString(2, u.getPassword());
+            stm.setString(3, u.getId());
+            if (stm.executeUpdate() > 0)
+                msj = "el usuario se modifico";
+            else
+                msj = "el usuario no se modifico";
+        } catch (Exception e) {
+                System.out.println(e);
+        }finally {
+            if (stm != null) {
+                try {
+                    stm.close();
+                } catch (SQLException sqlEx) {
+                    sqlEx.printStackTrace();
+                }
+                stm = null;
+            }
+            try {
+                cc.close();
+                System.out.println("Closed  connection!");
+            } catch (SQLException sqlEx) {
+                sqlEx.printStackTrace();
+            }
+        }
+        return msj;
+    }
+
+    public static String eliminarUsuario(Usuario u){
+        PreparedStatement stm = null;
+        Connection cc = null;
+        String msj = "";
+
+        cc = c.getConnection();
+        try{
+            String sql = "DELETE FROM usuarios WHERE id= ?";
+            stm = (PreparedStatement) cc.prepareStatement(sql);
+            stm.setString(1, u.getId());
+            if (stm.executeUpdate() > 0)
+                msj = "el usuario se ha eliminado";
+            else
+                msj = "error al eliminar el usuario";
+        } catch (Exception e) {
+                System.out.println(e);
+        }finally {
+            if (stm != null) {
+                try {
+                    stm.close();
+                } catch (SQLException sqlEx) {
+                    sqlEx.printStackTrace();
+                }
+                stm = null;
+            }
+            try {
+                cc.close();
+                System.out.println("Closed  connection!");
+            } catch (SQLException sqlEx) {
+                sqlEx.printStackTrace();
+            }
+        }
+        return msj;
+    }
 }

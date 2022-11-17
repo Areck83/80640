@@ -9,7 +9,7 @@ public class AppDb {
     //base de datos en memoria
     //public static Map<String, Usuario> usuarios = new HashMap<>();
     public static void main( String[] args ){
-        //port(80); Utilizar solamente el puerto si el servidor apache no se encuentra. Si si, entonces la ruta debe de ser la de 4567/rutaespecificada
+        //port(80); //Utilizar solamente el puerto si el servidor apache no se encuentra. Si si, entonces la ruta debe de ser la de 4567/rutaespecificada
 
         //Esta madre es para lo del error de CORS
         options("/*", (request, response) -> {
