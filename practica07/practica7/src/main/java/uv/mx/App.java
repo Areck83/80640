@@ -9,7 +9,7 @@ public class App {
     //base de datos en memoria
     public static Map<String, Usuario> usuarios = new HashMap<>();
     public static void main( String[] args ){
-        port(80);
+        //port(80); Utilizar solamente el puerto si el servidor apache no se encuentra. Si si, entonces la ruta debe de ser la de 4567/rutaespecificada
         //Inicializacion de datos
         Usuario u1 = new Usuario("1", "pablo", "1234");
         Usuario u2 = new Usuario("2", "ana", "7890");
@@ -21,7 +21,7 @@ public class App {
         get("/usuario", (req, res) -> gson.toJson(u1));
         get("/usuarios", (req, res) -> gson.toJson(usuarios));
 
-        post("/", (req, res)->{
+        post("/usuarios", (req, res)->{
             String datosFormulario = req.body();
             Usuario u = gson.fromJson(datosFormulario, Usuario.class);
             usuarios.put(u.getId(), u);
@@ -31,3 +31,5 @@ public class App {
 }
 
 //curl -X POST -d '{id:"3", nombre:"jose", password:"123"}' http://localhost
+//curl -X POST -d '{id:"3", nombre:"jose", password:"123"}' http://localhost:4567/usuarios
+//Tener especial cuidado con las comillas
